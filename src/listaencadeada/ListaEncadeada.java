@@ -1,7 +1,5 @@
 package listaencadeada;
 
-import one.digitalinnovation.No;
-
 public class ListaEncadeada<T> {
 	
 	No<T> referenciaEntrada;

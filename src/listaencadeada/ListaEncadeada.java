@@ -1,5 +1,7 @@
 package listaencadeada;
 
+import one.digitalinnovation.No;
+
 public class ListaEncadeada<T> {
 	
 	No<T> referenciaEntrada;
@@ -90,4 +92,18 @@ public class ListaEncadeada<T> {
 		return referenciaEntrada == null ? true: false;
 	}
 
+	@Override
+	public String toString() {
+		String strRetorno = "";
+		No<T> noAuxiliar = referenciaEntrada;
+		
+		for (int i = 0; i < this.size(); i++) {
+			strRetorno += "[No{conteudo=" + noAuxiliar.getConteudo() + "}]--->";
+			noAuxiliar = noAuxiliar.getProximoNo();
+		}
+		
+		strRetorno += "null";
+		
+		return strRetorno;
+	}
 }
